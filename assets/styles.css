@@ -1,0 +1,38 @@
+/* body {
+    background-image: url('images/kcimage2.jpg');
+    background-size: cover;
+
+    
+} */
+
+.navbar {
+    background-color: #1a237e;
+}
+
+.face {
+    width: 250px;
+    height: 450px;
+    margin: 50px;
+}
+
+#bio, form {
+    background-color: rgb(95, 95, 109);
+    font-size: 30px;
+    margin: 20px;
+    opacity: .9;
+}
+
+.carousel-item {
+    width: auto;
+    height: auto;
+    justify-content: center;
+}
+
+.carousel-caption {
+    color: yellow;
+}
+
+/* i {
+    width: 7px;
+    height 7px;
+} */
