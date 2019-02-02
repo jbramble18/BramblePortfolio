@@ -33,9 +33,7 @@ body {
     justify-content: center;
 }
 
-.carousel-caption {
-    color: yellow;
-}
+
 
 .input-field input:focus + label {
     color:black !important;
@@ -43,7 +41,7 @@ body {
   /* label underline focus color */
  .row .input-field input:focus {
     border-bottom: 1px solid black !important;
-    box-shadow: 0 1px 0 0 black!important
+    box-shadow: 0 1px 0 0 black!important;
   }
 
   .material-icons{
@@ -54,6 +52,16 @@ body {
     color: black !important;
     }
 
+   .input-field textarea:focus + label {
+       color: black !important;
+   }
+
+   .row .input-field textarea:focus {
+    border-bottom: 1px solid black !important;
+    box-shadow: 0 1px 0 0 black!important;
+
+   }
+    
 /* i {
     width: 7px;
     height 7px;
