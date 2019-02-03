@@ -61,8 +61,16 @@ body {
     box-shadow: 0 1px 0 0 black!important;
 
    }
-    
-/* i {
-    width: 7px;
-    height 7px;
-} */
+
+   .alert {
+       text-align: center;
+       padding: 10px;
+       background: #1a237e;
+       color: white;
+       margin-bottom: 10px;
+       display: none;
+   }
+ 
+   .footer {
+       height: auto;
+   }

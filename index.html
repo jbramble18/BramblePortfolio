@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>James Bramble Professional Portfolio</title>
     <!-- meta tag for viewport detection -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,35 +15,34 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- link to local css stylesheet -->
     <link rel="stylesheet" href="assets/styles.css">
-    <!-- link to firebase -->
-    <!-- <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script> -->
     <!-- link to fontawesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
         crossorigin="anonymous">
+    <!-- link to firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
 
-</head>
-<nav>
+    <nav>
 
-    <div class="nav-wrapper #1a237e indigo darken-4">
-        <a href="#" class="brand-logo right">James Bramble</a>
-        <ul id="nav-mobile" class="left hide-on-med-and-down">
-            <li><a href="#bio">About</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </div>
+        <div class="nav-wrapper #1a237e indigo darken-4">
+            <a href="#" class="brand-logo right">James Bramble</a>
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+                <li><a href="#bio">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
 
-</nav>
+    </nav>
 
 <body>
     <div class="parallax-container">
         <div class="parallax"><img src='assets/images/kcimage2.jpg'></div>
     </div>
-    <div class="section #cfd8dc blue-grey lighten-4 scrollspy">
+    <div class="section #cfd8dc blue-grey lighten-4 scrollspy z-depth-4">
         <div class="row container" id="bio">
             <h2 class="header">Bio</h2>
             <div class="col s4">
-                <img class="face circle responsive-img z-depth-5" src="assets/images/IMG_0086.jpg">
+                <img class="face responsive-img z-depth-5" src="assets/images/IMG_0086.jpg">
             </div>
             <div class="col s7 offset-s1 #cfd8dc blue-grey lighten-4">
 
@@ -61,7 +61,7 @@
         <div class="row">
             <div class='col s2 offset-s10'>
                 <a class="tooltipped" data-position="left" data-tooltip="My Resume" href="assets/images/resume.pdf">
-                    <span style="color: black">
+                    <span style="color:  #1a237e">
                         <i class="far fa-file-pdf fa-5x"></i>
                     </span>
                 </a>
@@ -71,10 +71,10 @@
     <div class="parallax-container">
         <div class="parallax"><img src="assets/images/royals.png"></div>
     </div>
-    <div class="section #cfd8dc blue-grey lighten-4 scrollspy">
+    <div class="section #cfd8dc blue-grey lighten-4 scrollspy z-depth-4">
         <div class="row container" id="portfolio">
             <h2 class="header">Portfolio</h2>
-            <div class="carousel carousel-slider z-depth-5">
+            <div class="carousel carousel-slider">
                 <a class="carousel-item tooltipped" href="https://jbramble18.github.io/See-and-Say/" target="blank"
                     data-position="above" data-tooltip="See and Say Group Project"><img src="assets/images/SeeAndSay.PNG"
                         class="responsive"></a>
@@ -95,20 +95,20 @@
     <div class="parallax-container">
         <div class="parallax"><img src="assets/images/fountain.jpg"></div>
     </div>
-    <div class="section #cfd8dc blue-grey lighten-4 scrollspy">
-        <div class="row container" id="contact">
+    <div class="section #cfd8dc blue-grey lighten-4 scrollspy" id="contactForm">
+        <div class="row container">
             <h2 class="header">Contact</h2>
             <div class="row">
                 <form class="col s12">
                     <div class="row">
                         <div class="input-field col s6">
                             <i class="material-icons prefix">account_circle</i>
-                            <input id="icon_prefix" type="text" class="validate blue-text text-darken-2">
+                            <input id="name" type="text" class="validate blue-text text-darken-2" required>
                             <label for="icon_prefix" class="blue-text text-darken-2">Name</label>
                         </div>
                         <div class="input-field col s6">
                             <i class="material-icons prefix">phone</i>
-                            <input id="icon_telephone" type="tel" class="validate blue-text text-darken-2">
+                            <input id="telephone" type="tel" class="validate blue-text text-darken-2">
                             <label for="icon_telephone" class="blue-text text-darken-2">Telephone</label>
                         </div>
                     </div>
@@ -119,37 +119,28 @@
                     <div class="row">
                         <div class="input-field col s12">
                             <i class="material-icons prefix">email</i>
-                            <input id="email" type="email" class="validate">
+                            <input id="email" type="email" class="validate" required>
                             <label for="email" class="blue-text text-darken-2">Email</label>
-                            <!-- <span class="helper-text" data-error="wrong" data-success="right"></span> -->
                         </div>
 
                     </div>
                     <div class="row">
-                        <form class="col s12">
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <i class="material-icons prefix">mode_edit</i>
-                                    <textarea id="textarea2" class="materialize-textarea" data-length="140"></textarea>
-                                    <label for="textarea2" class="blue-text text-darken-2">Send me a Message</label>
-                                </div>
-                            </div>
-                        </form>
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">mode_edit</i>
+                            <textarea id="textarea2" class="materialize-textarea" data-length="140"></textarea>
+                            <label for="textarea2" class="blue-text text-darken-2">Send me a Message</label>
+                        </div>
+
+
                     </div>
-                    <a class="waves-effect waves-light btn #1a237e indigo darken-4">Submit</a>
-
+                    <a class="waves-effect waves-light btn #1a237e indigo darken-4" id="submit">Submit</a>
                 </form>
-
-
             </div>
+        </div>
+
+        <div class="container">
             <div class="row">
-                <!-- <div class="col s2">
-                    <a href="https://www.facebook.com/james.bramble1">
-                        <span style="color: #29487d">
-                            <i class="fab fa-facebook-square fa-7x"></i>
-                        </span>
-                    </a>
-                </div> -->
+
                 <div class="col s2">
                     <a href="https://twitter.com/James_Bramble18">
                         <span style="color: #1da1f2">
@@ -175,21 +166,32 @@
 
             </div>
         </div>
-
-        <script src=" https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
-        </script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-        <script src="assets/script.js"></script>
+    </div>
+    </div>
+    <script src=" https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="assets/script.js"></script>
 
 </body>
 
 <footer>
     <footer class="page-footer #1a237e indigo darken-4">
         <div class="footer-copyright">
-            <div class="container center-align">
-                © 2019 James Bramble
-
+            <div class="container">
+                <div class='row'>
+                    <div class='col s1'>
+                        <a class="grey-text text-lighten-4 left" href="#!">Tel: 913.620.8394</a>
+                    </div>
+                    <div class='col s2 offset-s4'>
+                        <a class="grey-text text-lighten-4 center">© 2019 James R Bramble</a>
+                    </div>
+                    <div class='col s1 offset-s4'>
+                        <a class="grey-text text-lighten-4 right" href="#!">Email: jbramble.rls@gmail.com</a>
+                    </div>
+                </div>
             </div>
+
         </div>
     </footer>
 </footer>
