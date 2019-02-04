@@ -1,16 +1,19 @@
+// initiates the js for materialize
+
 M.AutoInit();
 
+// js for carousel on portfolio page
 $('.carousel.carousel-slider').carousel({
     fullWidth: true,
     indicators: true
   });
-
+// js for character counter on textarea
   $(document).ready(function() {
     $('input#input_text, textarea#textarea2').characterCounter();
   });
 
 
-
+// firebase configuration
   var config = {
     apiKey: "AIzaSyCwJLzNM_uxPKBKfVsqMg54KnHA0THKy-Y",
     authDomain: "brambleportfolio.firebaseapp.com",
@@ -23,6 +26,7 @@ $('.carousel.carousel-slider').carousel({
 
   var database = firebase.database();
 
+// submit button sends information from contact form and stores on firebase database
   $("#submit").on("click", function(event) {
     event.preventDefault();
 
@@ -46,12 +50,12 @@ $('.carousel.carousel-slider').carousel({
     };
 
     database.ref().push(newContact);
-
+// sends toast to user to let them know that information has been sent
     M.toast({
       html: "Thank you! Your information has been sent. I will be in touch soon.",
       classes: 'rounded #1a237e indigo darken-4'
     });
-
+// clears out the contact form
     $("#name").val("");
     $("#telephone").val("");
     $("#email").val("");
